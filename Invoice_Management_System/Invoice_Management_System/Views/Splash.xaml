@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Invoice_Management_System.Views.Splash"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImageSource="background.jpg">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image  Source = "logo.png" x:Name="SplashIcon" HeightRequest="350" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center" Margin="0" />
+            <Label Text="– Poonia Brother Provides Best Invoicing Management System for All Vendor's. –" FontFamily="Assets/Fonts/Secret_Recipe.ttf#Secret Recipe" FontSize="35" TextColor="Goldenrod" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

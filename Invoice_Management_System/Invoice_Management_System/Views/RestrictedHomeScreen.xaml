@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Invoice_Management_System.Views.RestrictedHomeScreen"
+             BackgroundImageSource="Darker.jpg"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <StackLayout Padding="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Frame Margin="15,0" BorderColor="Transparent" HasShadow="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame Grid.Row="0" Grid.Column="0" Margin="20,10" BackgroundColor="#fff" BorderColor="#fff" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="WorkPeriods.jpg" />
+                            <Label Text="Work Periods" TextColor="DarkGreen" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="1" Margin="20,10" BackgroundColor="#fff" BorderColor="#fff" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="POS.png" />
+                            <Label Text="POS" TextColor="DarkGreen" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  NumberOfTapsRequired="1" />
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame Grid.Row="0" Grid.Column="2" Margin="20,10" BackgroundColor="#fff" BorderColor="#fff" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Tickets.png" />
+                            <Label Text="Tickets" TextColor="DarkGreen" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="1" Grid.Column="0" Margin="20,10" BackgroundColor="#242424" BorderColor="#242424" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Accounts.png" />
+                            <Label Text="Accounts" TextColor="DarkGray" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="1" Margin="20,10" BackgroundColor="Transparent" BorderColor="Transparent" CornerRadius="32" HasShadow="True" VerticalOptions="Center" HorizontalOptions="Center">
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                            <Image Source="LogoW.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="100" Aspect="AspectFit"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="1" Margin="20,10" BackgroundColor="#242424" BorderColor="#242424" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Warehouses.png" />
+                            <Label Text="Warehouses" TextColor="DarkGray" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="1" Grid.Column="2" Margin="20,10" BackgroundColor="#242424" BorderColor="#242424" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Reports.png" />
+                            <Label Text="Reports" TextColor="DarkGray" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="2" Grid.Column="0" Margin="20,10" BackgroundColor="#242424" BorderColor="#242424" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Manage.png" />
+                            <Label Text="Manage" TextColor="DarkGray" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame Grid.Row="2" Grid.Column="2" Margin="20,10" BackgroundColor="#fff" BorderColor="#fff" CornerRadius="32" HasShadow="True">
+                        <StackLayout>
+                            <Image Source="Logout.png" />
+                            <Label Text="Logout" TextColor="DarkGreen" FontSize="Header" FontAttributes="Bold" VerticalOptions="End" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer  NumberOfTapsRequired="1"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                </Grid>
+            </Frame>
+            <StackLayout Orientation="Horizontal" Margin="15,0">
+
+                <Frame Margin="10" Padding="10,5" BackgroundColor="#fff" BorderColor="#fff" HasShadow="True" CornerRadius="15">
+                    <Label Text="Keyboard" TextColor="#242424" FontAttributes="Bold"/>
+                </Frame>
+                <Label Text="DON'T FORGET TO END WORK PERIOD!" TextColor="Firebrick" FontAttributes="Bold" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand"/>
+
+
+                <Label Text="{Binding UserName}" TextColor="#fff" FontSize="Medium" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+                <Frame Margin="10" Padding="10,5" BackgroundColor="#fff" BorderColor="#fff" HasShadow="True" CornerRadius="15">
+                    <Label Text="Main Menu" TextColor="#242424" FontAttributes="Bold"/>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer  NumberOfTapsRequired="1" />
+                    </Frame.GestureRecognizers>
+                </Frame>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

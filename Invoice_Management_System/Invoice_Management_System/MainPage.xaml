@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="Invoice_Management_System.MainPage" BackgroundColor="DarkSlateBlue" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Margin="20,0,0,10" TextColor="#fff" VerticalOptions="End" HorizontalOptions="StartAndExpand" Text="Poonia Brothers"/>
+
+            <Label Grid.Row="0" Grid.Column="0" Margin="0,0,0,10" TextColor="#fff" VerticalOptions="End" HorizontalOptions="EndAndExpand" Text="XPRT Computing @ 2023"/>
+            <Frame Grid.Row="0" Grid.Column="0" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   BackgroundColor="#fff"
+                   CornerRadius="25" Margin="10,10,5,40">
+                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Frame BackgroundColor="WhiteSmoke" Margin="5,10,5,20" Padding="10" CornerRadius="12" Grid.Row="0" Grid.Column="0">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="logo.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="200"/>
+                                <Label Text="Invoice Management" TextColor="#7B1258" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Italic"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#242424" Margin="20" Padding="10" CornerRadius="30" Grid.Row="1" Grid.Column="0">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="home-button.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="Home" TextColor="#fff" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#242424" Margin="20" Padding="10" Grid.Row="2" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="data-analytics.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="Teams" TextColor="#fff" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+
+                        <Frame BackgroundColor="#242424" Margin="20" Padding="10" Grid.Row="3" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="earning.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="Analytics" TextColor="#fff" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#242424" Margin="20" Padding="10" Grid.Row="4" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="detail.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="Calendar" TextColor="#fff" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+                        <Frame BackgroundColor="#242424" Margin="20" Padding="10" Grid.Row="5" CornerRadius="30">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="comment.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                                <Label Text="Message" TextColor="#fff" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </Frame>
+
+                    </Grid>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="End">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                            <Frame HasShadow="True" CornerRadius="12" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,0,0,0"
+                                      BackgroundColor="Transparent">
+                                <StackLayout Margin="0">
+                                    <Image Source="logout.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40"/>
+                                    <Label Text="Log Out" FontSize="12" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="IndianRed"/>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1"  Tapped="Login_Page"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                            <Frame HasShadow="True" CornerRadius="12" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,0,0,0"
+                                      BackgroundColor="Transparent">
+                                <StackLayout Margin="0">
+                                    <Image Source="about.png" Aspect="AspectFit" HeightRequest="40" WidthRequest="40"/>
+                                    <Label Text="Help" FontSize="12" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TextColor="Black"/>
+                                </StackLayout>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" />
+                                </Frame.GestureRecognizers>
+                            </Frame>
+
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Frame Grid.Column="1" Grid.Row="0" 
+                   HorizontalOptions="FillAndExpand" 
+                   VerticalOptions="FillAndExpand" 
+                   BackgroundColor="#fff" 
+                   Margin="10" CornerRadius="25">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Frame BackgroundColor="WhiteSmoke" Margin="5,10" Padding="0" Grid.ColumnSpan="4" CornerRadius="30">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Padding="30,20">
+                                <Label Text="Billing Details" TextColor="Black" FontSize="20"/>
+                                <Label Text="Welcome, Shoaib Khan!" TextColor="Green" FontSize="15"/>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                                <StackLayout VerticalOptions="CenterAndExpand">
+                                    <Frame BackgroundColor="#fff" BorderColor="#242424" CornerRadius="20" Padding="0" Margin="10" WidthRequest="250" HeightRequest="50">
+                                        <SearchBar Placeholder="Search..." x:Name="SearchID" BackgroundColor="#fff"  Background="#fff" CancelButtonColor="red"></SearchBar>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand"  Margin="10,0">
+                                    <Image Source="notification.png" VerticalOptions="CenterAndExpand" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                                <StackLayout VerticalOptions="CenterAndExpand" Margin="10,0,30,0">
+                                    <Image Source="logo.png" HeightRequest="50" WidthRequest="50"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <StackLayout Grid.Row="1" Grid.Column="0">
+                        <Frame Margin="20" BackgroundColor="WhiteSmoke" Padding="20" CornerRadius="20" >
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Label Text="Balance" FontSize="20" TextColor="#242424" HorizontalOptions="FillAndExpand" FontAttributes="Bold"/>
+                                <Label Text="$105.942" FontSize="30" TextColor="#242424"  HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                                <Label Text="on February 12,2022" FontSize="12" TextColor="DarkGray"/>
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                                        <Frame HasShadow="True" CornerRadius="20" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,20,0,0"
+                                               BorderColor="Green" BackgroundColor="Green">
+                                            <Label Text="Deposit" TextColor="White" FontAttributes="Bold" 
+                                                   HorizontalTextAlignment="Center" 
+                                                   VerticalTextAlignment="Center"/>
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                        </Frame>
+                                        <Frame HasShadow="True" CornerRadius="20" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,20,0,0"
+                                         BorderColor="Green" BackgroundColor="Green">
+                                            <Label Text="Cash" TextColor="White" FontAttributes="Bold" 
+                                       HorizontalTextAlignment="Center" 
+                                       VerticalTextAlignment="Center"/>
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                        <Frame BackgroundColor="#fff" Margin="0,10,0,0" Padding="0">
+                            <StackLayout Orientation="Horizontal" Margin="0,10,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <StackLayout Orientation="Vertical" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                                    <Label Text="Paid" VerticalOptions="FillAndExpand" FontSize="15" FontAttributes="Bold" TextColor="Green"/>
+                                    <Label Text="Remaining" VerticalOptions="FillAndExpand" FontSize="15" FontAttributes="Bold" TextColor="Red"/>
+                                    <Label Text="Delivered" VerticalOptions="FillAndExpand" FontSize="15" FontAttributes="Bold" TextColor="DarkGoldenrod"/>
+                                    <Label Text="Recents" VerticalOptions="FillAndExpand" FontSize="15" FontAttributes="Bold" TextColor="Black"/>
+                                </StackLayout>
+                                <StackLayout Padding="0" Margin="0" HorizontalOptions="StartAndExpand"  VerticalOptions="CenterAndExpand" BackgroundColor="#fff">
+                                    <microcharts:ChartView x:Name="chartView4" HeightRequest="210" WidthRequest="200" BackgroundColor="#fff"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <StackLayout>
+                                <Label VerticalOptions="Center" Text="Recents Invoices" HorizontalOptions="StartAndExpand" TextColor="#242424" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <StackLayout HorizontalOptions="EndAndExpand">
+                                <Button VerticalOptions="Center" Text="View All" BackgroundColor="Transparent" TextColor="#242424" FontAttributes="Bold"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <!--<ScrollView Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">-->
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <StackLayout BackgroundColor="WhiteSmoke" Padding="20,5,0,5" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                                    <Label VerticalOptions="Center" Text="Clients" HorizontalOptions="StartAndExpand" WidthRequest="100" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                                    <Label VerticalOptions="Center" Text="Date" WidthRequest="100" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                                    <Label VerticalOptions="Center" Text="Amount" WidthRequest="100" HorizontalOptions="Center" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                                    <Label VerticalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Text="Status" WidthRequest="100" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                                </StackLayout>
+                                <BoxView HeightRequest="1" WidthRequest="1" Color="{DynamicResource black}" HorizontalOptions="FillAndExpand"></BoxView>
+                            </StackLayout>
+                            <ListView HasUnevenRows="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell >
+                                            <StackLayout Orientation="Horizontal" HeightRequest="40">
+                                                <!--<Label VerticalOptions="Center" Text="{Binding Description}" WidthRequest="260" TextColor="{DynamicResource black}" />
+                                                <Label VerticalOptions="Center" Text="{Binding Qty}" WidthRequest="40" TextColor="{DynamicResource black}" />-->
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                        <!--</ScrollView>-->
+                    </StackLayout>
+                    <StackLayout Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
+                        <Frame Margin="20" BackgroundColor="WhiteSmoke" Padding="20" CornerRadius="20" >
+                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                <Image Source="azeem.png"  HorizontalOptions="StartAndExpand" HeightRequest="100" WidthRequest="100"/>
+                                <Label Text="Muhammad Azeem" FontSize="30" TextColor="Black"  HorizontalOptions="StartAndExpand" FontAttributes="Bold"/>
+                                <Label Text="on February 12,2022" FontSize="12" TextColor="Gray"/>
+                                <Label Text="Hi! I have Completed All Orders " FontSize="12" TextColor="Gray"/>
+                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand">
+
+                                        <Frame HasShadow="True" CornerRadius="12" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,20,0,0"
+                                      BackgroundColor="Transparent">
+                                            <Label Text="$ 1263,832" TextColor="Green" FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" 
+                                       VerticalTextAlignment="Center"/>
+                                        </Frame>
+                                        <Frame HasShadow="True" CornerRadius="15" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Padding="10,12" Margin="5,20,0,0"
+                                               BorderColor="Green" BackgroundColor="Green">
+                                            <Label Text="Pay" TextColor="White"  FontAttributes="Bold" 
+                                       HorizontalTextAlignment="Center" 
+                                       VerticalTextAlignment="Center"/>
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="1" />
+                                            </Frame.GestureRecognizers>
+                                        </Frame>
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2"  Margin="0,0,0,0">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label VerticalOptions="Center" Text="Payments" HorizontalOptions="StartAndExpand" TextColor="#242424" FontAttributes="Bold"/>
+                            <Button VerticalOptions="Center" Text="Views All" BackgroundColor="Transparent" TextColor="#242424" FontAttributes="Bold"/>
+                        </StackLayout>
+                        <StackLayout BackgroundColor="WhiteSmoke" Padding="20,5,0,5">
+                            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                                <Label VerticalOptions="Center" Text="Clients" WidthRequest="150" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                                <Label VerticalOptions="Center" Text="Date" WidthRequest="100" HorizontalOptions="EndAndExpand" TextColor="{DynamicResource black}" FontAttributes="Bold"/>
+                            </StackLayout>
+                            <BoxView HeightRequest="1" WidthRequest="1" Color="{DynamicResource black}" HorizontalOptions="FillAndExpand"></BoxView>
+                        </StackLayout>
+                        <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,0,0,0">
+                                <ListView  HasUnevenRows="True" WidthRequest="300">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell >
+                                                <StackLayout Orientation="Horizontal" HeightRequest="40">
+                                                    <!--<Label VerticalOptions="Center" Text="Description" WidthRequest="260" TextColor="#242424" />
+                                                    <Label VerticalOptions="Center" Text="qty" WidthRequest="40" TextColor="#242424"/>
+                                                    <Label VerticalOptions="Center" Text="qty" WidthRequest="40" TextColor="#242424"/>
+                                                    <Label VerticalOptions="Center" Text="qty" WidthRequest="40" TextColor="#242424"/>
+                                                    <Label VerticalOptions="Center" Text="qty" WidthRequest="40" TextColor="#242424"/>
+                                                    <Label VerticalOptions="Center" Text="qty" WidthRequest="40" TextColor="#242424"/>-->
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
